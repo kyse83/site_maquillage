@@ -1,0 +1,367 @@
+*,::before,::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: 'mother_dayregular';
+    src: url('font/motherfont/motherday-webfont.woff2') format('woff2'),
+    url('font/motherfont/motherday-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*--------------------------nav bar ------------------------------*/
+
+
+.container_nav{
+    position:fixed;
+    width:100%;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    background:rgba(0, 0, 0); 
+    color:white; 
+    z-index:1;
+    
+     
+}
+.item_nav{
+    display:flex;
+    flex-wrap: wrap;  
+    align-items: center;
+    justify-content: space-between;     
+}
+.item{
+    margin:20px;
+}
+.item_nav li{
+    list-style: none;
+    text-align: center;
+}
+.item a{
+    text-decoration: none;
+    color:white;
+    padding:10px;
+    font-size:34px;
+    font-weight: 550;
+    font-family: mother_dayregular;
+}
+.item_image img{
+    width:120px;
+    height:60px;
+    border-radius: 5px;
+    margin-top: 5px;    
+}
+
+.item:hover{
+    font-style: inherit;
+    cursor: pointer;
+    text-decoration: underline 1px solid;
+}
+
+.radia{
+    width:60px;
+    height:60px;
+    border-radius: 50%;
+    align-items: center;
+}
+
+.logo{
+    display:flex;
+    position:relative;
+    text-align:center;
+    align-items: center;
+    flex-direction: column;
+    left:3.3%;
+}
+.logo:hover{
+    transform:scale(1.2);
+}
+.media{
+    
+    right:3.3%;
+    width:100px;
+    display:flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    flex-direction: row;
+    list-style-type:none;
+    
+}
+.bulle{
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    border: 1px solid #f1f1f1;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin:5px 0;
+    background: #f1f1f1;
+    cursor:pointer;
+    position:relative;
+}
+.bulle:hover{
+    transform: scale(1.2);
+}
+.logo-medias{
+    height:30px;
+    width:30px;
+}
+
+
+/*----------------------------------End of navbar ----------------------*/
+.home{
+background: fixed url("images/image.jpg") no-repeat center/cover; 
+align-items: center;
+justify-content: center;
+display:flex;
+flex-direction: row;
+}
+
+.galerie_photo,.container_tarifs{
+width:80%;
+max-width: 1300px;   
+min-height: 100vh; 
+display:flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: space-around;
+}
+
+.photo,.carte{
+    height:300px;
+    width:190px;
+    margin:35px 20px;
+    border-radius: 15px;
+    border:black solid 3px;
+    box-shadow:  -30px 30px 20px rgba(0,0,0,0.7);
+    overflow: hidden;
+    text-align:center; 
+}
+.carte{
+    padding: 8px;
+}
+/*------------------------------tarifs--------------------------------*/
+.tarif{
+    background:blanchedalmond;
+    min-height: 100vh;
+    align-items: center;
+    display:flex;
+    flex-direction: column;
+    flex:auto;
+}
+    
+h1{
+    text-align: center;
+    padding-top: 5px;
+    font-size: 2em;
+    font-family: mother_dayregular;
+}
+
+h2{
+    text-align:center;
+    padding-top: 20px;
+    font-size: 2.5em;
+    font-weight: bold;
+    font-family: mother_dayregular;
+}
+
+h3{
+    text-align:center;
+    font-family: mother_dayregular;
+    font-size: 2em;
+}
+.separateur{
+    width:50%;
+    height:3px;
+    background-color:  black;
+    
+}
+.carte p{
+    font-size: 1 em;
+    color:rgb(105, 103, 103);
+    margin-bottom: 20px;
+}
+.carte span{
+    font-size: 2em;
+    font-weight: bold;
+    
+}
+.carte ul{
+    border: 1px solid black;
+    border-radius: 15px;
+    text-align:left;
+    list-style-type: none;
+    padding:10px;
+    margin-top: 20px;
+}
+.carte li{
+    margin: 4px;
+}
+.check{
+    width:15px;
+    height:15px;  
+    margin-left: 3px;
+
+}
+/*----------------------------------------contact------------------------*/
+.contact{
+    display:flex;
+    background: fixed url("images/image.jpg") no-repeat center/cover; 
+    min-height:100vh;
+    flex-wrap: wrap;  
+    align-items: center;
+    justify-content: center;
+    
+}
+.visite{
+    height:370px;
+    width:300px;
+    background: url("images/radia3.jpg") center center no-repeat ;
+    background-size: 300px;
+    border-radius: 10px;
+    border: 5px solid black;
+    color: white;
+    font-family: Arial, sans-serif;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin:5px 0 5px 0;
+    box-shadow: 0 70px 63px -60px black;
+    transition: all .8s ;
+}
+.visite:hover{
+    background: url("images/radia3.jpg") left center no-repeat ;
+    background-size: 600px;
+}
+.visite h5{
+    margin:20px;
+    font-size:1.5em;
+    opacity:0;
+    transition: all 2s;
+}
+.visite:hover h5{
+    opacity:1;
+}
+.border{
+    height:360px;
+    width:290px;
+    border-radius: 5px;
+    position:relative;
+}
+.border:hover{
+    border: 5px solid white;
+}
+.icons{
+    position:absolute;
+    top:130px;
+    left:60px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    opacity:0;
+    transition: all 2s;
+}
+.visite:hover .icons{
+    opacity:1;
+}
+
+
+h5{
+    padding: 0 15px;
+    text-shadow: 10px 2px 10px rgba(0,0,0);
+    display: inline-block;
+    margin: 0 auto;
+    color:#f1f1f1;
+}
+/*------------------------------------formulaire-------------------------*/
+.titre_form{
+    background-image: linear-gradient(to bottom, transparent 0%, transparent 68%,blanchedalmond 68%,blanchedalmond 95%,transparent 95%);
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+.container_contact{
+    width:500px;
+    display:flex;
+    flex-direction: column;
+    background:rgba(0,0,0,0.6);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    padding: 30px 50px; 
+}
+.form_group{
+    width:100%;
+    margin-bottom: 20px;
+    position:relative;
+}
+.form_label{
+    position:absolute;
+    font-size: 16px;
+    right:0;
+    top:50%;
+    transform: translateY(-50%);
+    transition: all .3s;
+    color:#fff;
+}
+.form_input{
+    font-size: 16px;
+    font-family: inherit;
+    padding: 3px 10px;
+    border-radius: 3px;
+    border:none;
+    border-bottom: 4px solid transparent;
+    width: 100%;
+    transition: all .3s;
+}
+.form_input::-webkit-input-placeholder{
+    color:#000;
+    transform:translateY(4px);
+}
+.form_input:focus::-webkit-input-placeholder{
+    visibility: hidden;
+    opacity: 0;
+}
+.form_input:focus{
+    outline:none;
+    border-bottom: 4px solid #2FE94A;
+    width:66.6666%;
+
+}
+.form_input:focus:invalid{
+border-bottom: 4px solid #E94A2F;
+
+}
+.form_input:focus + .form_label{
+    opacity:1;
+    font-size:20px;
+}
+.form_message,.form_message .message_input{
+    width:100%;
+}
+.submitBtn{
+    display:block;
+    padding:5px 30px;
+    border:none;
+    background-color: blanchedalmond;
+    text-shadow: 0px 0px 5px rgba(0,0,0);
+    font-family: inherit;
+    font-size: 25px;
+    margin:20px auto;
+    cursor:pointer;
+    transition: all .3s;
+}
+.submitBtn:hover{transform:scale(1.02) translateY(-2px);}
+.submitBtn:focus{transform:scale(0.98) translateY(1px);}
+/*----------------------------------mentions légales -------------------------*/
+.mentionLegales{
+    background-color: black;
+    height:100px;  
+}
+.form_message-label{
+    color:#fff;
+    font-family: inherit;
+    font-size: 20px;
+}
