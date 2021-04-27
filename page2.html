@@ -6,32 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jolie Soleil</title>
     <link rel="stylesheet" href="style2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    
 
 </head>
 <body>
-    <nav class="container_nav">
-        <!--<div class="logo">
-            <a href="#"><img class="radia" src="images/radia.jpg"></a>
-            <p>Radia Ammor</p>
-        </div> -->
-        <ul class="item_nav">
-            <li class="item_image"><img src="images/logo.png" alt="logo du site"></li>
-        </ul>
-        
-        <ul class="item_nav">
-            <li class="item"><a href="#">Accueil</a></li>
-            <li class="item"><a href="#tarifs">Tarifs</a></li>
-            <li class="item"><a href="#">services</a></li>
-            <li class="item"><a href="#">contact</a></li1>
-        </ul>
-
-        <ul class="media">
-            <li class="bulle"><img src="images/fb.svg" alt="facebook" class="logo-medias"></li>
-            <li class="bulle"><img src="images/insta.svg" alt="instagram" class="logo-medias"></li>
-        </ul>
-        
-    </nav>
+    <header>
+        <nav>
+            <!--<div class="logo">
+                <a href="#"><img class="radia" src="images/radia.jpg"></a>
+                <p>Radia Ammor</p>
+            </div> -->
+            
+            <div class="navigation">
+                <ul>
+                    <li class="hamburger"><img src="images/hamburger.png" alt="menu"></li>
+                    <li class="logo"><img src="images/logo.png" alt="logo du site"></li>  
+                    <li class="item"><a href="#">Accueil</a></li>
+                    <li class="item"><a href="#tarifs">Tarifs</a></li>
+                    <li class="item"><a href="#">services</a></li>
+                    <li class="item"><a href="#">contact</a></li1>
+                    <li class="bulle"><img src="images/fb.svg" alt="facebook" class="logo-medias"></li>
+                    <li class="bulle"><img src="images/insta.svg" alt="instagram" class="logo-medias"></li>
+                </ul>
+            </div>   
+        </nav>     
+    </header>
 
     
     <div class="home">
@@ -141,6 +141,22 @@
     <div class="mentionLegales">
 
     </div>
-    
+    <script>
+        $(document).ready(function(){
+            $(".hamburger").on("click",function(){
+                $("nav").toggleClass("menu");
+            })
+        });
+
+        $(window).on("scroll",function(){
+            if($(window).scrollTop()){
+                $("nav").addClass("scroll");
+            }else{
+                $("nav").removeClass("scroll");
+            }
+        })
+
+
+    </script>
 </body>
 </html>
